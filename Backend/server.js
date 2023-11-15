@@ -45,11 +45,11 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api", userRoutes);
-app.use(fileRoutes);
-app.use("/api", productRoutes);
-app.use("/api", orderRoutes);
-app.use("/api", seedRoutes);
+app.use("/", userRoutes);
+app.use("/", fileRoutes);
+app.use("/", productRoutes);
+app.use("/", orderRoutes);
+app.use("/", seedRoutes);
 
 
 // listen on port 4000
