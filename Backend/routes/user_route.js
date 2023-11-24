@@ -142,6 +142,7 @@ router.put(
             user.email = req.body.email || user.email;
             user.phone = req.body.phone || user.phone;
             user.address = req.body.address || user.address;
+            user.image = req.body.image || user.image;
             if (req.body.password) {
                 user.password = bcryptjs.hashSync(req.body.password, 8);
             }
@@ -155,7 +156,7 @@ router.put(
                 isAdmin: updatedUser.isAdmin,
                 phone: updatedUser.phone,
                 address: updatedUser.address,
-                // token: generateToken(updatedUser),
+                image: updatedUser.image,
                 token: jwtToken
             });
         } else {
