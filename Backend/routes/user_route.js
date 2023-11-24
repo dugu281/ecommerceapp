@@ -37,6 +37,7 @@ router.post('/users/signup', (req, res) => {
                                 name: user.name,
                                 email: user.email,
                                 isAdmin: user.isAdmin,
+                                image: user.image,
                                 token: jwtToken,
                                 result: 'User signed up successfully!'
                             });
@@ -81,6 +82,7 @@ router.post('/users/signin', (req, res) => {
                             name: userInDB.name,
                             email: userInDB.email,
                             isAdmin: userInDB.isAdmin,
+                            image: userInDB.image,
                             token: jwtToken
                         });
 
