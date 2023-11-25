@@ -16,7 +16,7 @@ seedRouter.post('/seed/',
   isAdmin,
   expressAsyncHandler(async (req, res) => {
 
-    const createdProducts = await Product.insertMany(data.products);
+    // const createdProducts = await Product.insertMany(data.products);
     const createdProducts = await Product.insertMany([
     {
       name: 'Admin',
